@@ -1,5 +1,5 @@
 ﻿cmake_minimum_required(VERSION 2.8.9)
-project(KilmaMeter)
+project(ClimateMeter)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/modules/")
 
@@ -48,7 +48,7 @@ add_definitions( -DOPEN_SSL=${OPEN_SSL} )
   #  endif()
 #endif()
 
-add_executable(KilmaMeter ${SOURCE_FILES})
-target_link_libraries(KilmaMeter ${ADDITIONAL_LIBS} -lwiringPi)
-set_target_properties(KilmaMeter PROPERTIES COMPILE_DEFINITIONS "DAEMON=0")
+add_executable(ClimateMeter ${SOURCE_FILES})
+target_link_libraries(ClimateMeter ${ADDITIONAL_LIBS} -lwiringPi)
+set_target_properties(ClimateMeter PROPERTIES COMPILE_DEFINITIONS "DAEMON=0")
 
